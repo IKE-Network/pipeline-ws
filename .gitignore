@@ -1,0 +1,21 @@
+# Component repos (separate git repos, not tracked here)
+ike-tooling/
+ike-pipeline/
+ike-lab-documents/
+ike-infrastructure/
+ike/
+
+# Build output
+target/
+
+# IDE
+.idea/
+
+# OS
+.DS_Store
+
+# Checkpoints
+checkpoints/
+
+# Claude worktrees
+.claude/worktrees/
