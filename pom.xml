@@ -28,7 +28,7 @@
     <name>Pipeline Workspace</name>
 
     <properties>
-        <ike-maven-plugin.version>21</ike-maven-plugin.version>
+        <ike-maven-plugin.version>22-SNAPSHOT</ike-maven-plugin.version>
     </properties>
 
     <build>
@@ -80,30 +80,6 @@
             </activation>
             <subprojects>
                 <subproject>ike-lab-documents</subproject>
-            </subprojects>
-        </profile>
-
-        <profile>
-            <id>with-ike-infrastructure</id>
-            <activation>
-                <file>
-                    <exists>${project.basedir}/ike-infrastructure/pom.xml</exists>
-                </file>
-            </activation>
-            <subprojects>
-                <subproject>ike-infrastructure</subproject>
-            </subprojects>
-        </profile>
-
-        <profile>
-            <id>with-ike</id>
-            <activation>
-                <file>
-                    <exists>${project.basedir}/ike/pom.xml</exists>
-                </file>
-            </activation>
-            <subprojects>
-                <subproject>ike</subproject>
             </subprojects>
         </profile>
 

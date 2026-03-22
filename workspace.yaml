@@ -43,7 +43,7 @@ components:
       Documentation pipeline: AsciiDoc renderers, doc resources,
       build standards, BOM, ike-parent. Uses ike-maven-plugin
       from ike-tooling as a build plugin.
-    repo: https://github.com/IKE-Community/ike-pipeline.git
+    repo: https://github.com/kec/ike-pipeline.git
     branch: main
     version: 28-SNAPSHOT
     groupId: network.ike
@@ -55,31 +55,7 @@ components:
     type: document
     description: >
       IKE Lab topic library and assembly documents (~300 topics).
-    repo: https://github.com/IKE-Community/ike-lab-documents.git
-    branch: main
-    version: ~
-    groupId: network.ike
-    depends-on:
-      - component: ike-pipeline
-        relationship: build
-
-  ike-infrastructure:
-    type: document
-    description: >
-      Build infrastructure documentation.
-    repo: https://github.com/IKE-Community/ike-infrastructure.git
-    branch: main
-    version: ~
-    groupId: network.ike
-    depends-on:
-      - component: ike-pipeline
-        relationship: build
-
-  ike:
-    type: document
-    description: >
-      Root site for IKE Community documentation at ike.network.
-    repo: https://github.com/IKE-Community/ike.git
+    repo: https://github.com/kec/ike-lab-documents.git
     branch: main
     version: ~
     groupId: network.ike
@@ -89,5 +65,5 @@ components:
 
 groups:
   tooling: [ike-tooling, ike-pipeline]
-  docs: [ike-lab-documents, ike-infrastructure, ike]
+  docs: [ike-lab-documents]
   all: [tooling, docs]

@@ -2,8 +2,6 @@
 ike-tooling/
 ike-pipeline/
 ike-lab-documents/
-ike-infrastructure/
-ike/
 
 # Build output
 target/
