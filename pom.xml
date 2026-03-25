@@ -28,7 +28,7 @@
     <name>Pipeline Workspace</name>
 
     <properties>
-        <ike-maven-plugin.version>22-SNAPSHOT</ike-maven-plugin.version>
+        <ike-maven-plugin.version>33</ike-maven-plugin.version>
     </properties>
 
     <build>
