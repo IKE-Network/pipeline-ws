@@ -28,7 +28,7 @@
     <name>Pipeline Workspace</name>
 
     <properties>
-        <ike-maven-plugin.version>33</ike-maven-plugin.version>
+        <ike-maven-plugin.version>41</ike-maven-plugin.version>
     </properties>
 
     <build>
