@@ -28,7 +28,7 @@
     <name>Pipeline Workspace</name>
 
     <properties>
-        <ike-maven-plugin.version>41</ike-maven-plugin.version>
+        <ike-tooling.version>49</ike-tooling.version>
     </properties>
 
     <build>
@@ -36,7 +36,7 @@
             <plugin>
                 <groupId>network.ike</groupId>
                 <artifactId>ike-maven-plugin</artifactId>
-                <version>${ike-maven-plugin.version}</version>
+                <version>${ike-tooling.version}</version>
             </plugin>
         </plugins>
     </build>
