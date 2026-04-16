@@ -9,8 +9,8 @@
   automatically includes only the repos that are physically cloned.
 
   Usage:
-    mvn ike:status                           # Workspace status
-    mvn ike:dashboard                        # Full dashboard
+    mvn ws:status                           # Workspace status
+    mvn ws:dashboard                        # Full dashboard
     mvn clean verify -pl ike-pipeline -am    # One component + deps
 -->
 <project xmlns="http://maven.apache.org/POM/4.1.0"
@@ -27,16 +27,17 @@
 
     <name>Pipeline Workspace</name>
 
-    <properties>
-        <ike-tooling.version>49</ike-tooling.version>
-    </properties>
-
     <build>
         <plugins>
             <plugin>
-                <groupId>network.ike</groupId>
+                <groupId>network.ike.tooling</groupId>
                 <artifactId>ike-maven-plugin</artifactId>
-                <version>${ike-tooling.version}</version>
+                <version>108</version>
+            </plugin>
+            <plugin>
+                <groupId>network.ike.pipeline</groupId>
+                <artifactId>ike-workspace-maven-plugin</artifactId>
+                <version>98</version>
             </plugin>
         </plugins>
     </build>

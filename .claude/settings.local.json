@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mvn --version)",
+      "Bash(mvn site:*)",
+      "Bash(mvn install:*)",
+      "Bash(xargs jar:*)",
+      "Bash(xargs javap:*)",
+      "Bash(mvn dependency:tree -pl ike-maven-plugin)",
+      "Bash(mvn verify:*)",
+      "Bash(mvn validate:*)",
+      "Bash(mvn dependency:tree -pl ike-parent)",
+      "Bash(javap -classpath ~/.m2/repository/org/asciidoctor/asciidoctorj-api/3.0.1/asciidoctorj-api-3.0.1.jar org.asciidoctor.extension.MacroProcessor)",
+      "Bash(mvn ike:release -DallowBranch=release/35)",
+      "WebSearch",
+      "Bash(mvn dependency:tree -pl example-project)",
+      "Bash(mvn dependency:tree -Dplugin=org.asciidoctor:asciidoctor-maven-plugin:3.2.0)",
+      "Bash(curl -s \"https://repo1.maven.org/maven2/org/asciidoctor/asciidoctor-maven-plugin/3.2.0/asciidoctor-maven-plugin-3.2.0.pom\")",
+      "Bash(curl -s \"https://repo1.maven.org/maven2/org/asciidoctor/asciidoctor-maven-tools/3.2.0/asciidoctor-maven-tools-3.2.0.pom\")",
+      "Bash(mvn clean:*)",
+      "Bash(mvn ike:release)",
+      "Bash(grep -n \"asciidoctor-converter-doxia-module\\\\|asciidoctor-parser-doxia-module\" /Users/kec/ike-dev/pipeline-ws/ike-pipeline/target/*.pom)",
+      "Bash(wc -l /Users/kec/ike-dev/pipeline-ws/ike-pipeline/target/project-local-repo/network.ike/ike-pipeline/*/ike-pipeline-*.pom)",
+      "Bash(grep -c '\\\\.md$')",
+      "Bash(grep -c '\\\\.adoc$')",
+      "Bash(grep -c 'pom\\\\.xml$')",
+      "Bash(grep -c '\\\\.xml$')",
+      "Bash(grep '\\\\.adoc$')",
+      "Bash(git rm:*)",
+      "Bash(grep '\\\\.html$')",
+      "Bash(ls /Users/kec/ike-dev/ike-lab-documents/topics/src/docs/asciidoc/*.adoc)",
+      "Bash(mvn help:effective-pom -pl topics)",
+      "Bash(pandoc \"/Users/kec/Downloads/Zoom Meeting 20260327.docx\" -t markdown)"
+    ]
+  }
+}
