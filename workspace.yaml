@@ -15,17 +15,7 @@ defaults:
   branch: main
   maven-version: "4.0.0-rc-5"
 
-component-types:
-  infrastructure:
-    description: "Build tooling, parent POMs, shared resources"
-    build-command: "mvn clean install"
-    checkpoint-mechanism: git-tag
-  document:
-    description: "AsciiDoc topic libraries and assemblies"
-    build-command: "mvn clean verify"
-    checkpoint-mechanism: git-tag
-
-components:
+subprojects:
 
   ike-tooling:
     type: infrastructure
@@ -49,7 +39,7 @@ components:
     version: 28-SNAPSHOT
     groupId: network.ike
     depends-on:
-      - component: ike-tooling
+      - subproject: ike-tooling
         relationship: tool-time
 
   ike-lab-documents:
@@ -61,10 +51,6 @@ components:
     version: ~
     groupId: network.ike
     depends-on:
-      - component: ike-pipeline
+      - subproject: ike-pipeline
         relationship: build
 
-groups:
-  tooling: [ike-tooling, ike-pipeline]
-  docs: [ike-lab-documents]
-  all: [tooling, docs]

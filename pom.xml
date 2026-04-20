@@ -37,7 +37,7 @@
             <plugin>
                 <groupId>network.ike.pipeline</groupId>
                 <artifactId>ike-workspace-maven-plugin</artifactId>
-                <version>98</version>
+                <version>105</version>
             </plugin>
         </plugins>
     </build>
