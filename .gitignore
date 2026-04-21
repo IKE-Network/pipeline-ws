@@ -17,3 +17,6 @@ checkpoints/
 
 # Claude worktrees
 .claude/worktrees/
+
+# ws:* goal reports
+ws꞉*.md
