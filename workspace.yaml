@@ -25,8 +25,8 @@ subprojects:
       Release, workspace, gitflow, and build-utility goals.
     repo: https://github.com/kec/ike-tooling.git
     branch: main
-    version: 21-SNAPSHOT
-    groupId: network.ike
+    version: 122-SNAPSHOT
+    groupId: network.ike.tooling
     depends-on: []
 
   ike-pipeline:
@@ -37,8 +37,8 @@ subprojects:
       from ike-tooling as a build plugin.
     repo: https://github.com/kec/ike-pipeline.git
     branch: main
-    version: 28-SNAPSHOT
-    groupId: network.ike
+    version: 109-SNAPSHOT
+    groupId: network.ike.pipeline
     depends-on:
       - subproject: ike-tooling
         relationship: tool-time
