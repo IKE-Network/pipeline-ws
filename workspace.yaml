@@ -19,6 +19,7 @@ subprojects:
 
   ike-tooling:
     type: infrastructure
+    branch: main
     description: >
       Maven plugin (ike-maven-plugin) and workspace model library.
       Release, workspace, gitflow, and build-utility goals.
