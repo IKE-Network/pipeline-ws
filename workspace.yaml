@@ -17,17 +17,17 @@ defaults:
 
 subprojects:
 
-  ike-tooling:
-    type: infrastructure
-    branch: main
-    description: >
-      Maven plugin (ike-maven-plugin) and workspace model library.
-      Release, workspace, gitflow, and build-utility goals.
-    repo: https://github.com/kec/ike-tooling.git
-    branch: main
-    version: 122-SNAPSHOT
-    groupId: network.ike.tooling
-    depends-on: []
+  # ike-tooling is intentionally NOT a workspace subproject.
+  # It is the bootstrap project — the source of ike-maven-plugin,
+  # which every other subproject uses at build time. Its own release
+  # procedure relies on ike:release-publish from the plugin it
+  # produces (self-bootstrap), so no external orchestrator can
+  # release it without first installing that SNAPSHOT locally.
+  # Treating ike-tooling as a workspace release target creates a
+  # chicken-and-egg that can't be resolved from outside its reactor.
+  # Release ike-tooling manually from ike-tooling/ using its own
+  # ike:release-publish goal; downstream workspaces pick up the
+  # new tag via their ike-tooling.version property.
 
   ike-pipeline:
     type: infrastructure
@@ -39,9 +39,7 @@ subprojects:
     branch: main
     version: 109-SNAPSHOT
     groupId: network.ike.pipeline
-    depends-on:
-      - subproject: ike-tooling
-        relationship: tool-time
+    depends-on: []
 
   ike-lab-documents:
     type: document
