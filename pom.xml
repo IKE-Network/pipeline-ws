@@ -32,12 +32,12 @@
             <plugin>
                 <groupId>network.ike.tooling</groupId>
                 <artifactId>ike-maven-plugin</artifactId>
-                <version>108</version>
+                <version>123</version>
             </plugin>
             <plugin>
                 <groupId>network.ike.pipeline</groupId>
                 <artifactId>ike-workspace-maven-plugin</artifactId>
-                <version>105</version>
+                <version>109</version>
             </plugin>
         </plugins>
     </build>
