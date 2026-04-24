@@ -58,18 +58,6 @@
             </subprojects>
         </profile>
 
-        <profile>
-            <id>with-ike-pipeline</id>
-            <activation>
-                <file>
-                    <exists>${project.basedir}/ike-pipeline/pom.xml</exists>
-                </file>
-            </activation>
-            <subprojects>
-                <subproject>ike-pipeline</subproject>
-            </subprojects>
-        </profile>
-
         <!-- ── Documents ─────────────────────────────────────────── -->
 
         <profile>

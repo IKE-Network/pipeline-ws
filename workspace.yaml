@@ -29,17 +29,11 @@ subprojects:
   # ike:release-publish goal; downstream workspaces pick up the
   # new tag via their ike-tooling.version property.
 
-  ike-pipeline:
-    type: infrastructure
-    description: >
-      Documentation pipeline: AsciiDoc renderers, doc resources,
-      build standards, BOM, ike-parent. Uses ike-maven-plugin
-      from ike-tooling as a build plugin.
-    repo: https://github.com/kec/ike-pipeline.git
-    branch: main
-    version: 109-SNAPSHOT
-    groupId: network.ike.pipeline
-    depends-on: []
+  # ike-pipeline was split into ike-docs + ike-platform + example repos
+  # (see IKE-Network/ike-issues#216) and archived. Downstream consumers
+  # now depend on ike-docs/ike-platform/ike-tooling as external-consumer
+  # released artifacts; this workspace does not orchestrate their
+  # development. See ike-issues#233 for the alignment-model design.
 
   ike-lab-documents:
     type: document
@@ -49,7 +43,5 @@ subprojects:
     branch: main
     version: ~
     groupId: network.ike
-    depends-on:
-      - subproject: ike-pipeline
-        relationship: build
+    depends-on: []
 
